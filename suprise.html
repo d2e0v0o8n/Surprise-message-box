@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Special Surprise for You</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #000000, #520057);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .box {
+      background-color: #9400D3;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #ff00ff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px #ffffff;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" onclick="showMessage()">
+    💖 Tap Me for a Message 💖
+  </div>
+
+  <div id="message"></div>
+
+  <script>
+    const messages = [
+      "You're strong, smart, and deeply appreciated. 💪❤️",
+      "Your smile can light up the darkest room. 😊🌟",
+      "You are a king/queen in your own right. 👑",
+      "Someone out there is blessed to know you. 💫",
+      "You're not just good enough — you're amazing. 💥",
+      "You carry light, even when you can't see it. 🔥",
+      "To the world, you might be one person, but to someone, you are the world. 🌍",
+      "Your presence alone is a gift. 🎁",
+      "Never forget: you're valued, you're loved, you're powerful. ❤️💪",
+      "You are a masterpiece in progress. 🎨✨"
+    ];
+
+    function showMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").innerText = messages[randomIndex];
+    }
+  </script>
+</body>
+</html>
